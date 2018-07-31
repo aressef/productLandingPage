@@ -13,3 +13,4 @@ Technologies used:
 
 
 codepen.io link - https://codepen.io/aressef/pen/mjVxXx
+project requirements link - https://bit.ly/2LSkJG6

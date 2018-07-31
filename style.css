@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: Verdana, Geneva, sans-serif;
+  margin-top: 75px;
+}
+
+#header {
+  background-color: #333333;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#header__logo {
+  height: 50px;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#header-img {
+  padding-right: 10px;
+}
+
+#header__name {
+  font-size: 20px;
+  color: #fff;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-bar__ul {
+  margin-right: 50px;
+  list-style: none;
+  width: 300px;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bar__li {
+  width: 50px;
+  height: 20px;
+  text-align: center;
+}
+
+.nav-bar__link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-bar__link:hover {
+  color: #92dd5a;
+  font-size: 17px;
+}
+
+.hamburger-menu {
+  display: none;
+  font-size: 20px;
+}
+
+.hamburger-menu__icon {
+  text-decoration: none;
+  color: #92dd5a;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333333;
+  z-index: -1;
+}
+
+section {
+  /* using padding here to fix the nav bar cutting off the top of the section when using nav-bar buttons */
+  padding-top: 75px;
+  margin-bottom: 25px;
+}
+
+#connect {
+  position: relative;
+  bottom: 25px;
+  padding-bottom: 75px;
+  margin-bottom: 0px;
+  background-color: #f2f2f2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#connect__tagline {
+  font-size: 50px;
+  font-weight: normal;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+#connect #form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  /* used to hide the label for email input */
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#email-div {
+  margin: 10px 0;
+}
+
+#email {
+  text-align: center;
+  font-size: 16px;
+  height: 40px;
+  width: 300px;
+  border-radius: 3px;
+  border: 1px solid grey;
+}
+
+#email:focus {
+  box-shadow: 0 0 5px #92dd5a;
+  border: 1px solid #92dd5a;
+  outline: #92dd5a solid 1px;
+}
+
+#submit {
+  background-color: #92dd5a;
+  border-radius: 4px;
+  color: #333333;
+  font-size: 1em;
+  height: 40px;
+  width: 100px;
+  margin: 10px;
+  border: 0px solid;
+  cursor: pointer;
+}
+
+#submit:hover {
+  color: #92dd5a;
+  background-color: #333333;
+}
+
+#services {
+  width: 790px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 30px;
+}
+
+.service__type {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.service__icon {
+  font-size: 70px;
+  color: #92dd5a;
+}
+
+.service__name {
+  font-size: 25px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.service__description {
+  line-height: 2;
+}
+
+#video__div {
+  margin-bottom: 100px;
+}
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer__ul {
+  list-style: none;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #000;
+}
+
+#copyright {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 850px) {
+  #services {
+    width: 100%;
+  }
+  .service__icon {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #nav-bar {
+    align-items: flex-end;
+  }
+
+  .hamburger-menu {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 60px;
+    padding-right: 5px;
+  }
+
+  .hamburger-menu:active {
+    background-color: #92dd5a;
+  }
+
+  .hamburger-menu:active .hamburger-menu__icon {
+    color: #333333;
+  }
+
+  .nav-bar__ul {
+    background-color: #92dd5a;
+    position: fixed;
+    margin: 0;
+    top: 50px;
+    width: 250px;
+    max-height: 0px;
+    flex-direction: column;
+    transition: max-height 0.35s ease-out;
+    overflow: hidden;
+  }
+
+  .nav-bar__ul.responsive {
+    max-height: 150px;
+    transition: max-height 0.35s ease-in;
+  }
+
+  .nav-bar__li {
+    width: 250px;
+    height: 50px;
+    border-bottom: 1px solid #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-bar__link {
+    color: #333333;
+  }
+
+  #connect__tagline {
+    font-size: 40px;
+  }
+
+  .service {
+    margin: 15px 20px;
+  }
+
+  .service__icon {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .sevice {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .service__icon {
+    display: none;
+  }
+
+  .service__type {
+    width: 100%;
+  }
+
+  .service__name {
+    font-size: 20px;
+  }
+
+  .service__description {
+    font-size: 14px;
+  }
+}

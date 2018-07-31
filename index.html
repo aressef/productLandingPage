@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Landing Page</title>
+
+  <!-- Links -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Scripts-->
+  <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+  <script src="main.js"></script>
+
+</head>
+
+<body>
+
+  <header id="header">
+
+    <div id="header__logo">
+      <img src="img/terminal.png" alt="" id="header-img" height="40px" widght="40px">
+      <p id="header__name">Code Realization</p>
+    </div>
+
+    <nav id="nav-bar">
+      <div class="hamburger-menu">
+        <a class="hamburger-menu__button" href="javascript:void(0);" onclick="toggleHamburgerMenu()">
+          <i class="fas fa-bars hamburger-menu__icon"></i>
+        </a>
+      </div>
+
+      <ul class="nav-bar__ul" id="nav-bar__ul">
+        <li class="nav-bar__li">
+          <a class="nav-bar__link" href="#connect">Connect</a>
+        </li>
+        <li class="nav-bar__li">
+          <a class="nav-bar__link" href="#services">Services</a>
+        </li>
+        <li class="nav-bar__li">
+          <a class="nav-bar__link" href="#video__div">Videos</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+  <div class="main">
+
+    <section id="connect">
+
+      <h2 id="connect__tagline">Your Ideas - Realized</h2>
+
+      <form action="https://www.freecodecamp.com/email-submit" id="form">
+        <div id="email-div">
+          <label class="hidden" for="email">Email</label>
+          <input name="email" type="email" id="email" placeholder="Enter Your Email to Get Connected" required />
+        </div>
+        <input type="submit" id="submit" value="Connect">
+      </form>
+
+    </section>
+
+    <section id="services">
+
+      <div class="service">
+
+        <div class="service__icon">
+          <i class="fas fa-magic"></i>
+        </div>
+
+        <div class="service__type">
+          <h3 class="service__name">Custom Designs</h3>
+          <p class="service__description">We strive to make your website dreams come true. Our Design and Development teams work closely with you to bring
+            your ideas to life!</p>
+        </div>
+
+      </div>
+
+      <div class="service">
+
+        <div class="service__icon">
+          <i class="fas fa-user-friends"></i>
+        </div>
+
+        <div class="service__type">
+          <h3 class="service__name">Professional IT Consulting</h3>
+          <p class="service__description">Our staff is up to date on the latest in the ever evolving tech landscape. We offer both individual and team instructional
+            and informational sessions so you can be too.</p>
+        </div>
+
+      </div>
+
+      <div class="service">
+
+        <div class="service__icon">
+          <i class="fas fa-thumbs-up"></i>
+        </div>
+
+        <div class="service__type">
+          <h3 class="service__name">SEO and Social Media Strategies</h3>
+          <p class="service__description">The ultimate goal is to connect you with and grow your customer base. With strategic social marketing and optimization
+            we help you reach a much larger audience.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="video__div">
+
+      <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/HMi-g9iGVew" frameborder="0" allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
+
+    </section>
+
+    <footer>
+
+      <ul class="footer__ul">
+        <li class="footer__li">
+          <a class="footer__link" href="#">Privacy</a>
+        </li>
+        <li class="footer__li">
+          <a class="footer__link" href="#">Terms</a>
+        </li>
+        <li class="footer__li">
+          <a class="footer__link" href="#">Contact</a>
+        </li>
+      </ul>
+
+      <p id="copyright">Copyright 2018, Code Realization</p>
+
+      <div class="credit hidden">Icons made by
+        <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from
+        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by
+        <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+      </div>
+    </footer>
+
+  </div>
+
+
+</body>
+
+</html>
